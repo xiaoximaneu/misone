@@ -1,0 +1,19 @@
+article {
+    position: relative;
+    background-color: gray;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: relative;
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    display: block;
+  }
+
+.entered {
+    background-color: yellow;
+    position: sticky;
+    top: 100px;
+}

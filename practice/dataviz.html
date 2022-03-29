@@ -1,0 +1,61 @@
+
+      <!-- D3 charts start here-->
+      <div id="my_dataviz">
+        <!-- chart stuff in here -->
+        <script>
+          var margin = {top: 10, right: 10, bottom: 10, left: 10},
+           width = 800 - margin.left - margin.right,
+           height = 500 - margin.top - margin.bottom;
+
+           var svg = d3.select("#my_dataviz")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+        d3.csv('metro.csv',
+         function(d){
+        return { year: d.year, rider : d.annual_ridership }
+          },
+
+          // Now I can use this dataset:
+              function(data) {
+
+            // Add X axis --> it is a year format
+            var x = d3.scaleOrdinal()
+              .domain(d3.extent(data, function(d) { return d.year; }))
+              .range([ 0, width ]);
+            svg.append("g")
+              .attr("transform", "translate(0," + height + ")")
+              .call(d3.axisBottom(x));
+
+            // Add Y axis
+            var y = d3.scaleLinear()
+              .domain([0, d3.max(data, function(d) { return +d.rider; })])
+              .range([ height, 0 ]);
+            svg.append("g")
+              .call(d3.axisLeft(y));
+
+            // Add the line
+            svg.append("path")
+              .datum(data)
+              .attr("fill", "none")
+              .attr("stroke", "steelblue")
+              .attr("stroke-width", 1.5)
+              .attr("d", d3.line()
+                .x(function(d) { return x(d.year) })
+                .y(function(d) { return y(d.rider)})
+                )
+
+            })
+
+
+
+
+
+        </script>
+    </div>

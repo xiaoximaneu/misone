@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mini project</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/enter-view">
+      import enterView from 'enter-view'
+      </script>
+
+  </head>
+  <body>
+      <h1>Scrollytelling Miniproject</h1>
+      <h3>by ["Xiaoxi Ma", "Danica Jefferies"]</h3>
+      <!-- <script src="graphs.js"></script> -->
+
+      <div style="width: 1000px; height:2000px;">
+      </div>
+
+
+      <div class = 'sticky'>
+      </div>
+
+      <article style="height:1000px; background-color:gray;">
+        <script>
+          enterView({
+          selector: '.sticky',
+          offset: 0.5,
+          enter: function(el) {
+            el.classList.add('entered');
+          },
+          exit: function(el) {
+          el.classList.remove('entered');
+          },
+          // exit by editing height ... set var to be height of article and put into exit calc?
+          });
+
+        </script>
+
+      </article>
+
+      <div class = 'sticky'>
+      </div>
+    
+      <div style="width: 1000px; height:500px;">
+      </div>
+
+      
+  </body>
+</html>
