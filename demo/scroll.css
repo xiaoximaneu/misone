@@ -1,7 +1,15 @@
 .filter {
-    height: 20rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.intro {
+    margin-top: auto;
     text-align: center;
 }
+
 #scrolly-side .scrolly{
     display: flex;
     width: 75rem;
@@ -14,9 +22,10 @@ article {
     max-width:30rem;
 }
 .step {
-    min-height: 67vh;
+    max-width: 150px;
+    min-height: 40vh;
     margin-bottom: 1rem;
-    background-color: red;
+    background-color:steelblue;
     flex: 1;
     transition: background-color 250ms ease-in-out
     /* &: last-of-type: margin-bottom: 0;
@@ -29,6 +38,7 @@ figure.sticky {
     flex: 2;
     background: #FFFFFF;
     margin: 0;
+    margin-left: 8px;
     top: 25vh;
     left:0;
 }

@@ -8,11 +8,20 @@
     <script src="scroll.js"></script>
   </head>
   <body>
-    <!--first section here for the paragraph-->
+    <!--first section here for the headline-->
     <section class="filter">
       <h1>MI Studio I Mini Project</h1>
-      <p>Xiaoxi Ma & Danica Jefferies</p>
     </section>
+
+    <!--for the beginning part-->
+    <section class="intro">
+      <p>Xiaoxi Ma & Danica Jefferies</p>
+      <br>
+      <p>This is a project focused on implementing scrolleytelling with "position: sticky."
+        We are using this <a href="https://www.kaggle.com/datasets/timmofeyy/-world-metro?select=metro_countries_cities.csv">city and country-level metro ridership dataset</a> from Kaggle. 
+      </p>
+    </section>
+    
     
     <!--2nd section to set up text and graph-->
     <section id="scrolly-side">
@@ -21,15 +30,15 @@
         <!--use article to put step text-->
         <article>
           <div class="step" data-width="10%" data-index="0">
-            <p>10% bar</p>
+            <p>This is a map of annual metro ridership among different countries.</p>
           </div>
 
           <div class="step" data-width="80" data-index="1">
-            <p>80% bar </p>
+            <p>Interestingly, China has the most number of stations but Brazil has a higher annual ridership.</p>
           </div>
 
           <div class="step" data-width="50" data-index="2">
-            <p>50% bar</p>
+            <p>Ideally, if this map was in D3, it would zoom with the scrolly bar...</p>
           </div>
         </article>
         <!--sticky graphic-->
